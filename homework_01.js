@@ -229,71 +229,71 @@ function ex_1_I(x){
     return sumAll;
 }
 function ex_1_R(x){
-    return sumAllR;
+    return sumAllR(x);
 }
 
 function ex_2_I(x){
-    return sumAllD;
+    return sumAllD(x);
 }
 
 function ex_2_R(x){
-    return summAllDR;
+    return summAllDR(x);
 }
 
 function ex_3_I(x){
-    return media;
+    return media(x);
 }
 function ex_3_R(x){
-    return mediaR;
+    return mediaR(x);
 }
 
 function ex_4_I(x, y){
-    return intervallo;
+    return intervallo(x, y);
 }
 
 function ex_4_R(x, y){
-    return F_intervalloR;
+    return F_intervalloR(x, y);
 }
 
 function ex_5_I(x, y){
-    return media;
+    return media(x, y);
 }
 
 function ex_5_R(x, y){
-    return mediaR;
+    return mediaR(x, y);
 }
 
 function ex_6_I(x, y){
-    return div;
+    return div(x, y);
 }
 
 function ex_6_R(x, y){
-    return F_divR;
+    return F_divR(x, y);
 }
 function ex_7_I(x, y){
-    return potenza;
+    return potenza(x, y);
 }
 
 function ex_7_R(x, y){
-    return potenzaR;
+    return potenzaR(x, y);
 }
 
 function ex_9_I(x){
-    return arreyInvert;
+    return arreyInvert(x);
 }
 
 function ex_9_R(x){
-    return F_arrayInvertR;
+    return F_arrayInvertR(x);
 }
 
 function ex_10_I(x, y){
-    return riempiArray;
+    return riempiArray(x, y);
 }
 
 function ex_10_R(x, y){
-    return F_riempiArrayR;
+    return F_riempiArrayR(x, y);
 }
 
 function ex_11_I(x){
-    return separaP_D;
+    return separaP_D(x);
 }
