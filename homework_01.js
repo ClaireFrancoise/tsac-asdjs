@@ -226,7 +226,7 @@ function separaP_D(x){
 //per Tiziano
 
 function ex_1_I(x){
-    return sumAll;
+    return sumAll(x);
 }
 function ex_1_R(x){
     return sumAllR(x);
