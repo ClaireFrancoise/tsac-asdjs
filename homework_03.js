@@ -14,7 +14,7 @@ Stack.prototype.isEmpty = function(){
     return this.myarray.length == 0;
 }
 
-function dec_to_bin(a){
+function dec2bin(a){
     var numeri = new Stack();
     var risultato = a;
     var resto = 0;
