@@ -3,8 +3,8 @@ function sort(myarray){
 		return myarray;
 	} else {
 		var a = Math.ceil(myarray / 2);
-		var primo = myarray.slice(0, n);
-		var secondo = myarray.slice(n, myarray.length);
+		var primo = myarray.slice(0, a);
+		var secondo = myarray.slice(a, myarray.length);
 		return sort(primo).concat(sort(secondo));	
 	}
 }
