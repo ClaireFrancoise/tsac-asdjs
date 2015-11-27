@@ -28,17 +28,17 @@ CallBack.prototype.isEmpty = function() { return this.size() == 0; }
 function PriorityQueue() {
     	this.myarray = [];
 }
-
-PriorityQueue.prototype.enqueue = function(e, prio) {
-	var oggetto = {
-		numero : e,
-		priority : prio
-	}
-	for(i = 0; i < this.myarray.length-1; i++){
-		if(oggetto.priority > this.myarray[i]){
-			this.myarray.splice(i, 0, oggetto);
-		}
-	}
+function QueueItem(i, p) {
+    this.item = i;
+    this.priority = p;
+}
+PriorityQueue.prototype.enqueue = function(e) {
+	var indice = 0;
+	this.queue.some(function(el, indx)){
+		indice = indx;
+		return true
+	});
+	this.queue.splice(indice,0,e);
 	
 }
 PriorityQueue.prototype.dequeue = function() { return this.myarray.pop(); }
