@@ -35,11 +35,12 @@ function QueueItem(i, p) {
 PriorityQueue.prototype.enqueue = function(e) {
 	var indice = 0;
 	this.queue.some(function(el, indx)){
-		indice = indx;
-		return true
+		if(e.priority > el.priority){
+			indice = indx;
+			return true
+		}
 	});
-	this.queue.splice(indice,0,e);
-	
+	this.queue.splice(indice,0,e);	
 }
 PriorityQueue.prototype.dequeue = function() { return this.myarray.pop(); }
 PriorityQueue.prototype.front = function() { return this.myarray[this.myarray.length - 1]; }
