@@ -52,18 +52,25 @@ Stack.prototype.peek = function () {
 Stack.prototype.isEmpty = function () {
        return this.array.length == 0;
 }
-function inserimento(a){
+function inserimento(a) {
 	var pari = new Stack();
 	var dispari = new Stack();
-	for (i = 0; i < a.length - 1; i++){
-		if(a[i]%2 != 0){
+	for (i = 0; i < a.length; i++) {
+		if(a[i]%2 != 0) {
 		   	dispari.push(a[i]);
-		}else if(a[i]%2 == 0){
+		} else {
 		    	pari.push(a[i]);
-		}else{
-			return 0;
-		}
-	}	
+		}	
+	}
+	var molt = new Stack();
+	while (!dispari.isEmpty() || !pari.isEmpty()){
+		molt.push(dispari.pop() * pari.pop());
+	}
+	var tot = 0;
+	while (!molt.isEmpty()){
+		tot +=molt.pop();
+	}
+	return tot;
 }
 
 
