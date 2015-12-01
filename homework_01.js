@@ -45,12 +45,14 @@ function summAllDR(x){
 //esercizio 3
 function media(n){
     m = 0;
-    m = sumAll(n) / n.length;
-    return m;
+    for(i = 0; i < n.length; i++){
+       m = m + n[i];
+    }
+    return m/n.length;
 }
 
 function mediaR(n){
-    return sumAllR(n) / n.length;
+    return sumAll(n) / n.length;
 }
 
 //esercizio 4
@@ -117,22 +119,17 @@ function div(x, y){
         ris++;
     }
     resto = x - resto;
-    return ris + 'resto' + resto;
-}
-function divR(x, y, i, j){
-    if (x == 0){
-        return i + 'resto' + j;
-    }else if (j + y <= x){
-        j = j + y;
-        i++;
-        return i + 'resto ' + (x-j);
-    }
+    return ris + ' resto ' + resto;
 }
 
-function F_divR(x, y){
-    i = 0;
-    j = 0;
-    return divR(x, y, i, j);
+function divR(x, y){
+    if (x < y){
+        return [0, x];
+    }else{
+        var result = divR(x-y, y);
+        return [result[0] + 1, result[1]];
+    }
+    
 }
 
 
@@ -150,8 +147,8 @@ function potenza(x, y){
 
 
 function potenzaR(x, y, n){
-    if (y == 1){
-        return n;
+    if (y == 0){
+        return 1;
     } else {
         return potenzaR(x, y-1, molt(x,n));
     }
@@ -256,11 +253,11 @@ function ex_4_R(x, y){
 }
 
 function ex_5_I(x, y){
-    return media(x, y);
+    return molt(x, y);
 }
 
 function ex_5_R(x, y){
-    return mediaR(x, y);
+    return moltR(x, y);
 }
 
 function ex_6_I(x, y){
@@ -268,14 +265,14 @@ function ex_6_I(x, y){
 }
 
 function ex_6_R(x, y){
-    return F_divR(x, y);
+    return divR(x, y);
 }
 function ex_7_I(x, y){
     return potenza(x, y);
 }
 
 function ex_7_R(x, y){
-    return potenzaR(x, y);
+    return potenzaR(x, y, x);
 }
 
 function ex_9_I(x){
@@ -296,4 +293,21 @@ function ex_10_R(x, y){
 
 function ex_11_I(x){
     return separaP_D(x);
+}
+
+
+
+//matrice
+
+function matriceI(n){
+    var a = [];
+    var m = Math.sqrt(n.length);
+    for(i = 0; i < n; i++){
+       a[i] = n.slice(i*n, (i+1)*n);
+    }
+    return a;
+}
+
+function matriceR(){
+    
 }
