@@ -110,7 +110,7 @@ function calcolaStack(stringa) {
                     			v.push(operazione2 / operazione1);
                     			break;
 				default:
-					v.push(parseInt(x[i]));
+					v.push(parseInt(myarray[i]));
             		}
         	}
     	}
